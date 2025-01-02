@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position - Static, Relative, Absolute e Fixed</title>
+    <style>
+        .container {
+              border: 2px solid yellow;   
+              background-color: purple;
+              color: white;
+              margin: 40px 0;     
+              position: relative;
+              height: 150px;
+              width: 100px;
+        }
+        
+        .filho-absolute {
+            position: absolute;
+            background-color: red;
+            top: 100px;
+            right: 60%;
+        }
+      .fixed {
+        position: fixed;
+        background-color: red;
+        bottom: 20px;
+        z-index: 999;
+        color: #fff;
+        font-size: 60px;
+
+        
+      }
+    </style>
+</head>
+<body>
+    <div class="fixed">
+        Texto fixed
+    </div>
+    <div class="container">
+        Texto 1
+        <div class="filho-relative">
+            texto
+        </div>
+    </div>
+    <div class="container">
+        texto 2
+        <div class="filho-absolute">
+            texto 3
+        </div>
+    </div>
+<button id="btnModal">Abrir Modal</button>
+<div class="modal">
+    <div class="modal-conteudo">
+        Aqui um texto
+    </div>
+</div>
+<div class="container">
+    Texto 1
+    <div class="filho-relative">
+        texto
+    </div>
+</div>
+<div class="container">
+    texto 2
+    <div class="filho-absolute">
+        texto 3
+    </div>
+</div>
+<button id="btnModal">Abrir Modal</button>
+<div class="modal">
+<div class="modal-conteudo">
+    Aqui um texto
+</div>
+</div>
+<div class="container">
+    Texto 1
+    <div class="filho-relative">
+        texto
+    </div>
+</div>
+<div class="container">
+    texto 2
+    <div class="filho-absolute">
+        texto 3
+    </div>
+</div>
+<button id="btnModal">Abrir Modal</button>
+<div class="modal">
+<div class="modal-conteudo">
+    Aqui um texto
+</div>
+</div>
+</body>
+</html>

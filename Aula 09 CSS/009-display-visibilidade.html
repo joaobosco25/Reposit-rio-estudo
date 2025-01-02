@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display e Visibilidade</title>
+    <style>
+        p {
+            color: red;
+        }
+        p.exp-1 {/*Aqui eu coloquei o p primeiro e depois 
+            um .exp-1, para informar que quero que todos
+            os p do exp-1 sejam alterados*/
+            display: inline;/*O display block, da a propriedade
+            "de ponta a ponta", ou seja, em tags como o p,
+            o display:block é automaticamente implantado por 
+            padráo.*/
+            color: blue;
+            border: 2px solid red;
+        }
+
+        p.exp-2 {
+            border: 2px solid pink;
+        }
+
+        p.exp-3 {
+            border: 2px solid green;
+            display: inline-block;
+        }
+
+        .exemplo {
+            border: 2px solid yellow;
+        }
+
+        p.exp-4 {
+            display: none;
+            
+        } /*Aqui, colocando display como none, a princípio
+        o parágrafo do exemplo 4, ficará invisível, sem
+        nenhum display.*/
+
+        .aparecer:hover p.exp-4 {
+            display: block;
+        }
+        /*No entanto, quando adicionamos a propriedade 
+        :hover na div de class aparecer (que é a caixa
+        onde está localizado o parágrafo), estamos informando
+        que algo acontecerá, quando o mouse passar em cima 
+        da caixa APARECER. Quando colocamos, logo ao lado, 
+        o p.exp-4, estamos dizendo que algo vai acontecer
+        com o p, quando o mouse passar por cima da caixa, onde
+        está esse p. Assim, acrescentando o display:block dentro
+        dessas propriedades, estamos mandando que, assim 
+        que o mouse passar em cima da caixa, o display, irá
+        se transformar, de none, para block*/
+
+        div.malandro {
+            display: none;
+            font-weight: bold;
+            color: brown;
+            font-size: 24px;
+        }
+
+        .surpresa:hover div.malandro {
+         display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="surpresa">
+    Passe o mouse aqui e terá uma BAITA surpresa!
+    <div class="malandro">
+        <p>YEYEEEEEH!!!</p>
+        <img src="./assets/sergio.jpg" alt="serginho">
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+    <style>
+        /*0.0.0.1*/
+        p {
+            color: red;
+        } 
+        /*0.0.1.1*/
+        .nova-cor {
+            color: blue;
+        }
+        /*Ou seja, esse p, ganhou um ponto a mais, o ponto class, representado pelo 
+        terceiro 0. Antes era somente a tag p editada, ou seja estava 0.0.0.1 que são, 
+        respectivamente, Inline, Id, Class, Tags.
+        Sendo assim, após adicionar a mudança no p class, o binário ficará:
+        0.0.1.1
+        */
+
+        /*0.1.0.1*/
+        #nova-cor-id {
+            color: palevioletred;
+        }
+        /*Agora, colocando o id no p, fica 0.1.0.1, mas por que nao fica 0.1.1.1? Porque 
+        não estamos usando a class e o id juntos, estamos usando apenas o id nova-cor-id 
+        e a tag p, ou seja, deixando então 0.1.0.1. Em outras palavras, nao estamos usando 
+        inline (primeiro "0"), estamos usando um id (segundo "1"), não estamos usando 
+        nenhum class (terceiro "0") e estamos usando uma tag, a tag p (quarto "1")*/
+    </style>
+</head>
+<body>
+    <p>Texto 1</p>
+    <p class="nova-cor">Texto 1</p>
+    <p id="nova-cor-id">Texto 1</p>
+    <p class="nova-cor">Texto 1</p>
+    <p>Texto 1</p>
+</body>
+</html>

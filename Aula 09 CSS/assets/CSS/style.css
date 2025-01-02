@@ -1,0 +1,13 @@
+.sessao {
+    border: 3px solid red;
+}
+#luisa {
+    text-align: center; /*Centraliza o texto*/
+    margin: 0 auto; /*Centraliza a caixa*/
+    width: 200px;
+    padding: 30px;
+    background-color: #ef476f;;
+    
+}
+
+

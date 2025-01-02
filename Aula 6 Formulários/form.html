@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    
+<form>
+    <div>
+  <label for="name">Name<!--Primeiro abrimos o form, depois abrimos o label,
+    que por sua vez, colocamos o atributo FOR. Esse atributo vai referenciar o 
+    id único da nossa página que NESSE CASO, SE REFERE AO NOME. Esse id foi nomeado como NAME-->
+    <input type="text" id="name"/> <!--Agora, adicionamos a tag imput, que acrescenta 
+    ao formulário, -->
+  </label>
+    </div>
+
+
+   <div>
+  <label for="email">Email<!--Primeiro abrimos o form, depois abrimos o label,
+    que dessa vez, colocamos no atributo FOR o EMAIL. Esse atributo vai referenciar o 
+    id único do email da nossa página que NESSE CASO, SE REFERE AO EMAIL do usuario. 
+    Esse id foi nomeado como EMAIL-->
+    <input type="email" id="email" required/> <!--Agora, adicionamos a tag imput, que acrescenta 
+    ao formulário, assim como antes, o campo para preencher especificamente o email.
+    No entanto, dessa vez, adicionamos o atributo required, que tem como propósito
+    informar que, caso voce digite o nome ou algo que não está no formato de
+    e-mail, ele pedirá que tente de novo. Essa é a função do REQUIRED. -->
+  </label>
+   </div>
+
+   <div>
+  <label>
+  <input type="radio" name="personalidade" value="tarado">Tarado
+  </label>
+
+  <label>         
+  <input type="radio" name="personalidade" value="bravo">Bravo
+  </label>
+
+  <label>
+  <input type="radio" name="personalidade" value="alegre">Alegre
+  </label>
+
+  <label>
+  <input type="radio" name="personalidade" value="burro">Burro
+  <!--Podemos colocar o label também, mas para esse exemplo, usaremos apenas o input.
+  A tag input serve para mostrar o campo. Dessa forma, usando o atributo type RADIO, 
+  conseguimos fazer com que mostre as bolinhas para selecionar. Usando o atributo name
+  colocamos do que se trata, de um preço, valor, ou nesse caso, personalidade
+  e usando o atributo value, é possível escrever os valores das opções, para o PC
+  entender que escolhemos aquela e enviar para o backend ou localstorage.-->
+  </label>
+   </div>
+   
+   <h3>Agora, quais são as mais gostosas?</h3>
+<p>Pode Escolher todas se quiser</p>
+   <input type="checkbox" name="variasmulheres" value="mia"> Mia K
+   <input type="checkbox" name="variasmulheres" value="laura"> Laura C
+   <input type="checkbox" name="variasmulheres" value="barbara"> Bárbara
+   <input type="checkbox" name="variasmulheres" value="luana"> Luana
+   <input type="checkbox" name="variasmulheres" value="helena"> Helena do Nino
+ <!--Utilizando o checkbox, temos a função de selecionar mais de um ou até TODAS 
+ as opções, sendo assim, uma outra tag extremamente boa para form.-->
+
+ <!--Agora, vamos estudar o select-->
+ <div>
+ <label>
+    Selecione a gostosa
+    <select>
+        <option value="" selected>Selecione o corpo mais gostoso</option>
+        <option value="barbara">Boca maravilhosa da Babi</option>
+        <option value="mia">Bunda da Mia</option>
+        <option value="laura">Peitos da Laura</option>
+        <option value="helena">bochechas da helena</option>
+        <option value="luana">Rostinho da luana</option>
+    </select>
+ </label>
+ </div>
+ <!--Ou seja, primeiro, colocamos a tag label, para mostrar o campo. 
+ Depois, colocamos a tag SELECT, para adicionar a função de selecionar.
+ Sendo assim, dentro da select, colocamos as opções para selecionar, usando
+ a tag OPTION. A tag option necessita de atributos, sendo eles o value e
+ na primeira opção, o selected. A primeira tem esse atributo selected, pois 
+ o mesmo tem a função de ja deixar pré selecionado algo, no caso, a instrução.
+ A div foi usada para separar e entrar no espaço de baixo.
+ O atributo value é usado para traduzir ao computador e ao backend que aquele id
+ foi selecionado, exemplo, o value barbara, no backend representa a 
+ opção Boca maravilhosa da Babi-->
+<div>
+    <br>
+ <label>Digite seu Comentário <br>
+    
+    <textarea></textarea>
+ </label>
+</div>
+ <!--Com isso, criamos um campo onde o usuário poderá comentar e enviar este comentário ao 
+ backend. Basta abrir uma tag label e dentro dela, inserir a tag textarea-->
+  <button>Enviar Formulário</button>
+
+
+
+
+
+
+</form>
+
+</body>
+</html>
